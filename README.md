@@ -41,7 +41,7 @@ I've verified the license directory and I got a base64 string that may be an enc
 
 ![7](https://github.com/MRKING20/Mr-Robot-CTF-Writeup-/assets/64786452/73c6c180-f36b-409b-909a-ea806473f472)
 
-I decoded it and I got this "elliot:ER28-0652", I guess it's a username with a password probably we will use it later!
+I decoded it and I got this "***********", I guess it's a username with a password probably we will use it later!
 
 Now, we know that the website has a CMS WORDPRESS ( wp-login.php). The next step is to browse our result ;) 
 
@@ -75,7 +75,7 @@ And then we got our shell!
 ![12](https://github.com/MRKING20/Mr-Robot-CTF-Writeup-/assets/64786452/a1a4d109-79c1-4d30-915e-bc58812157eb)
 
 I searched for the second key, and I found it at ``/home/robot`` but I couldn't see it. First, we have the MD5 password hash of robot so we need to crack it!
-I cracked it (with ``https://md5hashing.net/hash/md5/``) and got the message: "abcdefghijklmnopqrstuvwxyz" 
+I cracked it (with ``https://md5hashing.net/hash/md5/``) and got the message: "*****************************" 
 Now I need to switch to the robot account but our shell is not interactive so let's fix it with ``$ python -c 'import pty;pty.spawn("/bin/bash")``
 
 ![13](https://github.com/MRKING20/Mr-Robot-CTF-Writeup-/assets/64786452/09653f00-2e82-4414-b2a3-45f74e913be1)
